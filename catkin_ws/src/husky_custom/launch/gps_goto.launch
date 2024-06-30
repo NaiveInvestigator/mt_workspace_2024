@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="gps_goto_expanded" pkg="husky_custom" type="gps_goto_expanded.py" output="screen"></node>
+  <node name="aruco_detect" pkg="husky_custom" type="aruco_detect.py" output="screen"></node>
+  <!-- <node name="aruco_move" pkg="husky_custom" type="aruco_move.py" output="screen"></node> -->
+</launch>

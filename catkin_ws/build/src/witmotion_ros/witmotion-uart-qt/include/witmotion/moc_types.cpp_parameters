@@ -1,0 +1,9 @@
+-I/home/mtbase/catkin_ws/src/src/witmotion_ros/witmotion-uart-qt/include
+-I/home/mtbase/catkin_ws/build/src/witmotion_ros/witmotion-uart-qt
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="witmotion_ros"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/mtbase/catkin_ws/build/src/witmotion_ros/witmotion-uart-qt/include/witmotion/moc_types.cpp
+/home/mtbase/catkin_ws/src/src/witmotion_ros/witmotion-uart-qt/include/witmotion/types.h

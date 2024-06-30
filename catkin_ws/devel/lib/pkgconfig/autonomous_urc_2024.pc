@@ -1,0 +1,8 @@
+prefix=/home/mtbase/catkin_ws/devel
+
+Name: autonomous_urc_2024
+Description: Description of autonomous_urc_2024
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

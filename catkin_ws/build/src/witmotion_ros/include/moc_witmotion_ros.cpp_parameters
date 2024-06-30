@@ -1,0 +1,14 @@
+-I/opt/ros/noetic/include
+-I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include
+-I/usr/share/orocos_kdl/cmake/../../../include
+-I/usr/include/eigen3
+-I/home/mtbase/catkin_ws/src/src/witmotion_ros/include
+-I/home/mtbase/catkin_ws/src/src/witmotion_ros/witmotion-uart-qt/include
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="witmotion_ros"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/mtbase/catkin_ws/build/src/witmotion_ros/include/moc_witmotion_ros.cpp
+/home/mtbase/catkin_ws/src/src/witmotion_ros/include/witmotion_ros.h

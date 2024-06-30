@@ -1,0 +1,2 @@
+autonomous_urc_2024:controller:geonav_transform-master:husky_custom:mt9/mt9:mt9/mt_arm:nmea_msgs:realsense2_description:rover_control:rtcm_msgs:simulation-mt-rover_description:witmotion_ros:zed-ros-wrapper/zed-ros-interfaces:zed-ros-wrapper/zed_nodelets:zed-ros-wrapper/zed_ros:zed-ros-wrapper/zed_wrapper
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/mtbase/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mtbase/catkin_ws/install -G Unix Makefiles

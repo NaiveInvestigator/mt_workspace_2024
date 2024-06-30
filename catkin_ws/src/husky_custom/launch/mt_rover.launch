@@ -1,0 +1,22 @@
+<launch>
+
+  
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find husky_custom)/config/localization.yaml" />
+    <remap from="/odometry/filtered" to="/odometry/false_filtered" />
+  </node>
+
+  <node pkg="husky_custom" type="sbg_gps_ll2xy.py" name="sbg_gps_ll2xy" output="screen"/>
+  <node pkg="husky_custom" type="imu2odom.py" name="imu2odom" output="screen"/> 
+  <!-- <node pkg="husky_custom" type="imu2odomhdt.py" name="imu2odomhdt" output="screen"/>  -->
+
+  <include file="$(find husky_custom)/launch/move_base_fr.launch" />
+  
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" respawn="true">
+    <remap from="/gps/fix" to="/navsat/fix" />
+  </node>
+
+</launch>
+
+<!-- gps frame -> odom, imu frame -> base_link -->
+

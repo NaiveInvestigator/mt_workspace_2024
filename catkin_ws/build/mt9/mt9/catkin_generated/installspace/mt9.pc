@@ -1,0 +1,8 @@
+prefix=/home/mtbase/catkin_ws/install
+
+Name: mt9
+Description: Description of mt9
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
