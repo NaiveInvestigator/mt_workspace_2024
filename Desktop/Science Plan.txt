@@ -1,0 +1,30 @@
+Amino Acid | Plant Cell | Biomass | Water Capillary (20s) | CO2, NH3, H | CO | O2 
+# ===================================== . ==================================== #
+   NO      |  Slightly  | 0.015g  |   28mm                |    Present  | No |Yes
+# ===================================== . ==================================== #
+   NO      |  NO        | 0.011g  |   18mm                |    Present  | No |Yes
+# ===================================== . ==================================== #
+   NO      |  NO        | 0.007g  |   17mm                |    Present  | No |Yes
+# ===================================== . ==================================== #
+   NO      |  NO        | 0.002g  |   21mm                |    Present  | No |Yes
+# ===================================== . ==================================== #
+   NO      |  NO        | 0.004g  |   22mm                |    Present  | No |Yes
+# ===================================== . ==================================== #
+
+
+Oxy Sensor : https://www.directindustry.com/prod/angst-pfister-sensors-power-ag/product-68695-2069157.html
+
+
+MQ 8 : Hydrogen Gas
+MQ 135 : Air Quality (Methane, CO2, Smoke, etc.)
+MQ 7 : Carbon Monoxide Gas
+
+Top Left 38.40889344679168, -110.79543085864556
+Bottom Left 38.40620448384733, -110.79543085864556
+Bottom Right 38.40619761535922, -110.78864236168661
+Top Right 38.409207784870105, -110.78785999191794
+
+
+Sedimentary - Sedmient clogged and pressurized into rocks
+Igneous - Solidified Lava Rocks
+Metamorphic - Marbel, Stripes, or Patterns (Minerals)

@@ -1,0 +1,13 @@
+<launch>
+
+    <machine name="rover"
+        address="192.168.1.21"
+        user="bleep_bloop"
+        password="1999"
+        env-loader="/opt/ros/noetic/rover_env.sh"
+        default="never">
+    </machine>
+
+    <node name="rover_listener" pkg="rover_control" type="listener.py" output="screen" machine="rover"/>
+
+</launch>

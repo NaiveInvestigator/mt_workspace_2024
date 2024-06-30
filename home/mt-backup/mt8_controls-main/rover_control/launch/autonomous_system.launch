@@ -1,0 +1,25 @@
+<launch>
+<arg name="rover_port" default="/dev/ttyACM0"/>
+<arg name="rgb_port" default="/dev/ttyACM1"/>
+<arg name="witmotion_port" default="/dev/ttyUSB0"/>
+
+<!-- dis is for starting the rover listener node, default is port ACM0 -->
+<node name="rover_node" pkg="rosserial_python" type="serial_node.py" args="$(arg rover_port)"/>
+
+<!-- dis is for ze rgb LED thingy-->
+<node name="status_led_node" pkg="rosserial_python" type="serial_node.py" args="$(arg rgb_port)"/>
+
+<!-- dis is for running the gps and imu nodes-->
+<node name="witmotion_talker_node" pkg="rover_control" type="witmotion_talker.py" args="$(arg witmotion_port)"/>
+<node name="gps_node" pkg="rover_control" type="gps_talker.py" />
+
+<!-- dis starts up the Realsense camera but only outputs the aruco tag detection info -->
+<node name="tag_detection_node" pkg="rover_control" type="tag_detect.py"/>
+
+<!-- i pray to God this node works as an emergency override control thingy to take over from the autonomous script-->
+<node name="key_teleop_node" pkg="rover_control" type="talker_keyboard.py"/>
+
+<!-- this will launch the trajectory planner script-->
+<node name="trajectory_planner_node" pkg="rover_control" type="trajectory_planner.py"/>
+
+</launch>

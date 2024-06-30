@@ -1,0 +1,2 @@
+.
+-DCATKIN_DEVEL_PREFIX=/home/mtbase/husky_custom-main/devel -DCMAKE_INSTALL_PREFIX=/home/mtbase/husky_custom-main/install -G Unix Makefiles

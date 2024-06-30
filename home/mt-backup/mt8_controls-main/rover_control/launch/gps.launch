@@ -1,0 +1,4 @@
+<launch>
+  <node name="gps_talker" pkg="rover_control" type="gps_talker.py"/>
+  <node name="gps_remap" pkg="rover_control" type="gps_remap.py"/>
+</launch>

@@ -1,0 +1,7 @@
+roscore
+roslaunch rosbridge_server rosbridge_websocket.launch
+mapproxy-util serve-develop ~/mapproxy/mapproxy.yaml
+python3 -m http.server
+rosrun turtlesim turtlesim_node
+
+see http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics

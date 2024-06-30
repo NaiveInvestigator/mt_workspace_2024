@@ -1,0 +1,13 @@
+<launch>
+
+    <machine name="rover"
+        address="192.168.1.69"
+        user="pi"
+        password="raspberry"
+        env-loader="/opt/ros/melodic/rover_env.sh"
+        default="never">
+    </machine>
+
+    <node name="rover_listener" pkg="rover_control" type="listener.py" output="screen" machine="rover"/>
+
+</launch>

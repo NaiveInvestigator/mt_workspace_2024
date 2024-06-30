@@ -1,3 +1,9 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.pack filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+spectro-cam-rs filter=lfs diff=lfs merge=lfs -text
+home/spectrometer/target/debug/deps/spectro_cam_rs-e66143fb9ea20b76 filter=lfs diff=lfs merge=lfs -text
+spectro_cam_rs-e66143fb9ea20b76 filter=lfs diff=lfs merge=lfs -text

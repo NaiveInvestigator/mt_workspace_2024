@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mongol-Tori Feed</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .camera-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%; /* Adjust width as needed */
+      height: 100%; /* Adjust height as needed */
+    }
+    .camera {
+      flex: 1 1 calc(33.33% - 10px); /* 33.33% for three cameras, minus gap */
+      max-width: calc(33.33% - 10px); /* Set maximum width */
+      height: 100%; /* Make cameras fill container height */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="camera-container">
+    <div class="camera">
+      <iframe src="http://192.168.1.69:57000/mjpeg" frameborder="0"></iframe>
+    </div>
+    <div class="camera">
+      <iframe src="http://192.168.1.69:56000/mjpeg" frameborder="0"></iframe>
+    </div>
+    <div class="camera">
+      <iframe src="http://192.168.1.69:58000/mjpeg" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+</html>
+
