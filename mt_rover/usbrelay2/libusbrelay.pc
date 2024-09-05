@@ -1,0 +1,11 @@
+prefix=/usr
+libdir=/usr/lib/x86_64-linux-gnu
+includedir=/usr/include
+
+Name: libusbrelay
+Description: A library to manipulate hidraw USB relay
+Version: 1.2
+Requires:
+Conflicts:
+Libs: -L/usr/lib/x86_64-linux-gnu -lusbrelay
+Cflags: -I/usr/include

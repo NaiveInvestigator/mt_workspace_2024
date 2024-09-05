@@ -1,0 +1,21 @@
+[Unit]
+Description=USB Relay MQTT service
+Documentation=man:usbrelayd(8)
+After=network.target
+StartLimitIntervalSec=10
+
+[Service]
+Type=simple
+# Daemon exits with EX_UNAVAILABLE (69) when there is no compatible hardware plugged in 
+Restart=on-failure
+RestartPreventExitStatus=69 
+RestartSec=1
+DynamicUser=yes
+# SupplementaryGroups should match the group used in udev rules
+SupplementaryGroups=usbrelay
+ExecStart=/usr/bin/python3 /usr/sbin/usbrelayd
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
