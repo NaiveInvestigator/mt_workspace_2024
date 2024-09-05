@@ -1,0 +1,1 @@
+{model_name}{model_size}-{date in d-m-y}-{num_epochs}.pt

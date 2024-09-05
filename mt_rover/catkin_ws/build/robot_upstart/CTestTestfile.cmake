@@ -1,0 +1,10 @@
+# CMake generated Testfile for 
+# Source directory: /home/mt-09/catkin_ws/src/robot_upstart
+# Build directory: /home/mt-09/catkin_ws/build/robot_upstart
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(_ctest_robot_upstart_roslint_package "/home/mt-09/catkin_ws/build/catkin_generated/env_cached.sh" "/usr/bin/python3" "/opt/ros/noetic/share/catkin/cmake/test/run_tests.py" "/home/mt-09/catkin_ws/build/test_results/robot_upstart/roslint-robot_upstart.xml" "--working-dir" "/home/mt-09/catkin_ws/build/robot_upstart" "--return-code" "/opt/ros/noetic/share/roslint/cmake/../../../lib/roslint/test_wrapper /home/mt-09/catkin_ws/build/test_results/robot_upstart/roslint-robot_upstart.xml make roslint_robot_upstart")
+set_tests_properties(_ctest_robot_upstart_roslint_package PROPERTIES  _BACKTRACE_TRIPLES "/opt/ros/noetic/share/catkin/cmake/test/tests.cmake;160;add_test;/opt/ros/noetic/share/roslint/cmake/roslint-extras.cmake;67;catkin_run_tests_target;/home/mt-09/catkin_ws/src/robot_upstart/CMakeLists.txt;16;roslint_add_test;/home/mt-09/catkin_ws/src/robot_upstart/CMakeLists.txt;0;")
+add_test(_ctest_robot_upstart_nosetests_test "/home/mt-09/catkin_ws/build/catkin_generated/env_cached.sh" "/usr/bin/python3" "/opt/ros/noetic/share/catkin/cmake/test/run_tests.py" "/home/mt-09/catkin_ws/build/test_results/robot_upstart/nosetests-test.xml" "--return-code" "\"/usr/bin/cmake\" -E make_directory /home/mt-09/catkin_ws/build/test_results/robot_upstart" "/usr/bin/nosetests3 -P --process-timeout=60 --where=/home/mt-09/catkin_ws/src/robot_upstart/test --with-xunit --xunit-file=/home/mt-09/catkin_ws/build/test_results/robot_upstart/nosetests-test.xml")
+set_tests_properties(_ctest_robot_upstart_nosetests_test PROPERTIES  _BACKTRACE_TRIPLES "/opt/ros/noetic/share/catkin/cmake/test/tests.cmake;160;add_test;/opt/ros/noetic/share/catkin/cmake/test/nosetests.cmake;83;catkin_run_tests_target;/home/mt-09/catkin_ws/src/robot_upstart/CMakeLists.txt;18;catkin_add_nosetests;/home/mt-09/catkin_ws/src/robot_upstart/CMakeLists.txt;0;")

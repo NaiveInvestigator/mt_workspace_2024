@@ -1,0 +1,8 @@
+prefix=/home/mt-09/husky_ws/devel
+
+Name: husky_custom
+Description: Description of husky_custom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

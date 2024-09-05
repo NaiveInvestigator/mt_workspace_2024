@@ -1,0 +1,12 @@
+names:
+- Bottle
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: bottle-detection-zjxba
+  url: https://universe.roboflow.com/bracu-mongoltori/bottle-detection-zjxba/dataset/1
+  version: 1
+  workspace: bracu-mongoltori
+test: ../test/images
+train: train/images
+val: valid/images

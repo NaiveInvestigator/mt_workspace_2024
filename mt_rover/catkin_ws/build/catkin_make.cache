@@ -1,0 +1,2 @@
+aliencontrol:mt-repo/mt9:mt-repo/mt_arm:robot_upstart
+-DCATKIN_DEVEL_PREFIX=/home/mt-09/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mt-09/catkin_ws/install -G Unix Makefiles

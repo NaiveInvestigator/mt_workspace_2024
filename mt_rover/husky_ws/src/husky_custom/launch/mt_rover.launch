@@ -1,0 +1,26 @@
+<launch>
+  
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find husky_custom)/config/localization.yaml" />
+    <remap from="/odometry/filtered" to="/odometry/false_filtered" />
+  </node>
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.06 0 0.08 0 0 0 base_link imu_link_ned 30" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="imu_broadcaster" args="0 0.06 0.02 0 0 0 base_link imu 30" /> -->
+  <!-- <node pkg="husky_custom" type="gps_goto.py" name="gps_goto" output="screen"/> -->
+  <node pkg="husky_custom" type="sbg_gps_ll2xy.py" name="sbg_gps_ll2xy" output="screen"/>
+  <node pkg="husky_custom" type="imu2odom.py" name="imu2odom" output="screen"/> 
+
+  <!-- <include file="$(find sbg_driver)/launch/examples/sbg_ellipseD.launch" /> -->
+  <include file="$(find husky_custom)/launch/move_base_fr.launch" />
+  
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" respawn="true">
+    <remap from="/gps/fix" to="/navsat/fix" />
+  </node>
+
+  <!-- <node pkg="rqt_tf_tree" type="rqt_tf_tree" name="rqt_tf_tree" output="screen"></node> -->
+
+</launch>
+
+<!-- gps frame -> odom, imu frame -> base_link -->
+

@@ -1,0 +1,44 @@
+import cv2 
+from ultralytics import YOLO
+import pyrealsense2 as rl_cam
+import numpy as np
+
+pipeline = rl_cam.pipeline()
+config = rl_cam.config()
+config.enable_stream(rl_cam.stream.color, 640, 480, rl_cam.format.bgr8, 30)
+pipeline.start(config)
+
+model = YOLO('yolov8n-25-2-24-40e.pt')  #bottle -> yolov8n-25-2-24-40e, mallet -> yolov8n-11-2-24-40e
+#cap = cv2.VideoCapture(0)
+
+trg_label = "Mallet" if 0 else "Bottle"
+conf_threshold = 0.5
+
+while True:
+    #ret, frame = cap.read()
+    frame = pipeline.wait_for_frames()
+    frame = frame.get_color_frame()
+    frame = np.asanyarray(frame.get_data())
+
+    results = model.predict(frame)
+    result = results[0]
+    #im_array = result.plot()
+    id_name_mapping = {value:key for key, value in result.names.items()}
+
+    bottle_x_centre, bottle_y_centre = None, None
+
+    for obj in result.boxes.data:
+        obj = obj.tolist()
+        if obj[4] > conf_threshold and obj[5] == float(id_name_mapping[trg_label]): 
+            bottle_x_centre = int((obj[0] + obj[2]) / 2)
+            bottle_y_centre = int((obj[1] + obj[3]) / 2)
+            break
+
+    cv2.circle(frame, (bottle_x_centre, bottle_y_centre), 5, (255, 0, 0), -1)
+
+    cv2.imshow('frame', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()

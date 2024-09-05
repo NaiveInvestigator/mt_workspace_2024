@@ -1,0 +1,8 @@
+prefix=/home/mt-09/catkin_ws/devel
+
+Name: mt_arm
+Description: Description of mt_arm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
